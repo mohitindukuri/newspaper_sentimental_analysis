@@ -7,7 +7,7 @@ def startMenu():
 
   statesCategories = ['https://indianexpress.com/section/cities/delhi/page/','https://indianexpress.com/section/cities/mumbai/page/','https://indianexpress.com/section/cities/chennai/page/','https://indianexpress.com/section/cities/hyderabad/page/','https://indianexpress.com/section/cities/bangalore/page/']
 
-  print('\nHello! Welcome to the News Reader and Analysis App!\nSelect from the following Categories.\n 1. National News. \n 2. State News. \n 3. Sports News \n 4. Entertainment News. \n 5. Technology News')
+  print('\nHello! Welcome to the News Reader and Analysis App!\nSelect from the following Categories.\n 1. National News. \n 2. State News. \n 3. Sports News \n 4. Entertainment News. \n 5. Technology News\n')
 
   checkCategory = input()
 
@@ -44,7 +44,7 @@ def startMenu():
 if __name__=='__main__':
 	lists=[]
 	mainUrl = startMenu()
-	print("\n HELLO!!! What do you wanna do know? : \n 1. See News \n 2. See Sentiment Value for National News \n 3. See overall Sentiment for now. \n")
+	print("\n HELLO!!! What do you wanna do know? : \n 1. See News \n 2. See Sentiment Value for News \n 3. See overall Sentiment for now. \n")
 	check = input("Enter the number: ")
 	sentValue=[]
 	for x in range(1,3):
