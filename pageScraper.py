@@ -10,15 +10,14 @@ def soupee(url):                                                            # Cr
   soup = bs(sauce, 'lxml')
   return soup
 
-def parser(soup):                                                           # Parse page and create two lists of the titles and link
+def parser(soup):                                                           # Parse page and create two lists of the titles and link                                                             # Parse page and create two lists of the titles and link
   titles = []                                                               # to each news of title
   links = []
   for news in soup.find_all('div', class_='articles'):
-    #title = news.h3.text
-    link = soup.select("title")
-    print(link)
-    #titles.append(title)
-    links.append(link[2]['href'])
+    title = news.h2.text
+    link = news.find_all('a')
+    titles.append(title)
+    links.append(link[1]['href'])
   return  titles, links
 
 def newsStoryGrabber(links):                                                # Use the Links list to goto the site and get the first two
@@ -27,7 +26,7 @@ def newsStoryGrabber(links):                                                # Us
     url = links[i]
     sauce=urllib.request.urlopen(url)
     soup = bs(sauce, 'lxml')
-    aa = soup.find('div', class_='article')
+    aa = soup.find('div', class_='articles')
     bb = aa.find_all('p')
     cc = bb[1].text + bb[2].text
     data.append(cc)
