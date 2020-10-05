@@ -29,7 +29,7 @@ def startMenu():
     elif selectDistrict == '5':
       mainUrl = statesCategories[4]
     else:
-      print("Try again!!!")
+      print("!!! You have entered wrong choice, Please try with a valid one !!!")
   elif checkCategory == '3':
     mainUrl = mainCategories[1]
   elif checkCategory == '4':
@@ -37,7 +37,7 @@ def startMenu():
   elif checkCategory == '5':
     mainUrl = mainCategories[3]
   else:
-    print("Try Again!!")
+    print("!!! You have entered wrong choice, Please try with a valid one !!!")
 
   return mainUrl
 
